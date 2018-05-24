@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Task list</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div id="popup_task" class="back" >
+    <div id="popup_wrapper" class="popup_wrapper">
+    <div class="task_img">
+      <div class="task_mask"></div>
+      <div class="task_new">
+        New task
+      </div>
+    </div>
+    <div class="make_task">
+      <textarea id="task_input" class="task_txt" type="text" name="name" placeholder="create new task" rows="8" cols="80"></textarea>
+      <button type="button" name="button" class="make_button" onclick="addTask()">+</button>
+    </div>
+    <div class="close" onclick="closePopup()">x</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="header">
+      <div class="mask">
+
+      </div>
+      <div class="header_wrapper">
+        <div class="header_text">
+          Your task list
+        </div>
+        <div class="header_popup">
+          <button type="button" class="button_popup" name="button" onclick="openPopup()">+ add new task</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="task_list_wrapper">
+      <div class="task_list">
+        <ul id="list_of_tasks" class="list_of_tasks"></ul>
+      </div>
+    </div>
+  </div>
+  <script src="js/common.js">
+  </script>
+</body>
+
+</html>

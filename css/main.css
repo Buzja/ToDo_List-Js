@@ -1,0 +1,270 @@
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background: #353d4a;
+}
+*{
+    outline: none !important;
+      box-sizing: border-box;
+}
+button{
+  cursor: pointer;
+}
+
+.container{
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 70px 0 #161616c4;
+}
+
+.header{
+  position: relative;
+  display: flex;
+  height: 300px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background: url('../images/bg.jpg') center center;
+  background-size: cover;
+  text-transform: uppercase;
+}
+.mask{
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background:  #353d4a;
+  opacity: .5;
+}
+.header_text{
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+  padding-bottom: 35px;
+}
+.header_wrapper{
+  z-index: 2;
+}
+.button_popup{
+  color: #fff;
+  font-size: 20px;
+  padding: 13px 36px;
+  border-radius: 30px;
+  border: #fff 2px solid;
+  background: none;
+  transition: .3s;
+}
+.button_popup:hover{
+  padding: 13px 45px;
+}
+.task_list_wrapper{
+  background: #353d4a;
+  font-size: 20px;
+  padding: 35px 45px;
+}
+.list_of_tasks{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.list_of_tasks li{
+  margin-bottom: 20px;
+  background: #484f5c;
+  color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  display: flex;
+position: relative;
+justify-content: flex-start;
+align-items: center;
+box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.4);
+}
+.disk:hover{
+  cursor: pointer;
+}
+.disk:hover img{
+  opacity: 1;
+}
+.disk img{
+  transition: .3s;
+  width: 55px;
+  opacity: .5;
+}
+.list_of_tasks p{
+  margin: 0;
+  padding: 0 15px;
+  transition: .3s;
+}
+.close{
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+  transition: .3s;
+  font-size: 30px;
+  line-height: 0px;
+  color: #fff;
+}
+.close:hover{
+  color: #ff6c6c;
+}
+.list_of_tasks .checked{
+  background: #2b323d;
+  color: #525c6b;
+  text-decoration: line-through;
+}
+.back{
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  background: rgba(0,0,0,.8);
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: .3s;
+}
+.task_img{
+  position: relative;
+  width: 370px;
+  background: url('../images/bg.jpg') center center;
+  background-size: cover;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px 0 0 10px;
+}
+.task_mask{
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background:  #353d4a;
+  opacity: .5;
+  border-radius: 10px 0 0 10px;
+}
+.task_new{
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  z-index: 2;
+}
+.popup_wrapper{
+  display: flex;
+  position: relative;
+}
+.popup_wrapper .close{
+  font-weight: bold;
+  color: #2d2d2d;
+  font-size: 16px;
+}
+.popup_wrapper .close:hover{
+  color: #ff6c6c;
+}
+.make_task{
+  background: #fff;
+  border-radius: 0 10px 10px 0;
+  padding: 50px 40px;
+}
+.task_txt{
+  font-family: "Lato", sans-serif;
+  padding: 5px 10px;
+  font-size: 15px;
+    color: #4c4c4c;
+    z-index: 2;
+    display: block;
+    border: #b7b7b7 solid 2px;
+    border-radius: 10px;
+    height: 160px;
+    width: 300px;
+    margin-bottom: 15px;
+}
+.make_button{
+  border: none;
+text-align: center;
+width: 90%;
+margin: 0 auto;
+display: block;
+padding: 18px 0;
+border-radius: 8px;
+color: #fff;
+font-size: 20px;
+background: #4ccdbf;
+transition: .3s;
+}
+.noTask{
+  color:#6e7684;
+  font-size: 15px;
+  text-align: center;
+}
+@media (max-width: 720px) {
+  .back{
+    flex-direction: column;
+justify-content: start;
+padding-top: 20px;
+  }
+  .task_img{
+    width: auto;
+    height: 30vh;
+    border-radius: 10px 10px 0 0;
+  }
+  .task_mask{
+    border-radius: 10px 10px 0 0;
+  }
+  .popup_wrapper .close{
+    color: #fff;
+  }
+  .task_txt {
+      padding: 5px 10px;
+      font-size: 15px;
+      height: 160px;
+      width: 95%;
+      margin: 0 auto;
+      margin-bottom: 15px;
+  }
+.make_task {
+    border-radius: 0 0 10px 10px;
+    padding: 25px 15px;
+}
+.popup_wrapper {
+    flex-direction: column;
+    width: 90%;
+}
+.header{
+  height: 40vh;
+}
+.header_text {
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+.button_popup {
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 30px;
+}
+.button_popup:hover{
+  padding: 10px 35px;
+}
+.task_list_wrapper {
+    font-size: 15px;
+    padding: 25px 20px;
+}
+.disk img{
+  width: 35px;
+}
+.list_of_tasks li{
+  padding: 20px;
+}
+.close{
+  right: 10px;
+  top: 10px;
+}
+.noTask{
+  font-size: 10px;
+}
+}
